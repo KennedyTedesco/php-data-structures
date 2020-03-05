@@ -1,0 +1,19 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Ds\\": "src/"
+    }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.9",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "scripts": {
+    "psalm": [
+      "./vendor/bin/psalm --show-info=false"
+    ],
+    "cs": [
+      "./vendor/bin/php-cs-fixer fix --allow-risky yes"
+    ]
+  }
+}
