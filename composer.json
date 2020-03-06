@@ -9,11 +9,12 @@
     "friendsofphp/php-cs-fixer": "^2.16"
   },
   "scripts": {
-    "psalm": [
-      "./vendor/bin/psalm --show-info=false"
+    "check": [
+      "@cs-check",
+      "@static"
     ],
-    "cs": [
-      "./vendor/bin/php-cs-fixer fix --allow-risky yes"
-    ]
+    "static": "psalm --show-info=false",
+    "cs-check": "php-cs-fixer --allow-risky yes",
+    "cs-fix": "php-cs-fixer fix --allow-risky yes"
   }
 }
